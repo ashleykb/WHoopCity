@@ -1,0 +1,113 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}About for Players{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+
+<div id="nav_bar_player">
+<a href="../" >home</a>
+| <a href="p_about"><font color="#565656">about player</font></a>
+| <a href="../" ><font color="#565656">example college search </font></a>
+| <a href="../register/register">register</a> 
+
+<div id="rightbar_player">
+<img src="/images/aau.jpg" width="225">
+</div>
+
+
+<!-- end #nav_bar --></div>
+
+
+<div id="sidebar1">
+<?php include '../sidebarad.html'; ?>
+<!-- end #sidebar1 --></div>
+
+
+<div id="container_player">
+
+<div id="mainContent_player">
+
+<div id="playermovie">
+	
+	<table>
+	<tr><td>				
+	<center><h3>My Game Film #1</h3><!-- The Movie Section -->
+	</td></tr>
+	<tr><td><object><param name="movie" value="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="200" height="150"></embed></object></center></td></tr>
+
+	<tr><td>				
+	<center>---</center>
+	</td></tr>
+	
+	<tr><td>				
+	<center><h3>My Game Film #2</h3><!-- The Movie Section -->
+	</td></tr>
+	<tr><td><object><param name="movie" value="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="200" height="150"></embed></object></center></td></tr>			
+
+	<tr><td>				
+	<center>---</center>
+	</td></tr>
+
+	</table>
+	
+	<!-- ends player movie div --> </div>
+
+
+<h5> Contact Information</h5>
+
+<table>																				<tr><td>
+Graduation Date: 				</td><td><?php echo "".$row['graduation_month']?> <?php echo ', '.$row['graduation_year'];?>	</td></tr><tr><td> 
+Birth Date: 					</td><td><?php echo "".$row['birth_month']?> <?php echo ', ' .$row['birth_year'];?>		</td></tr><tr><td> 
+High School Team:				</td><td><?php echo "".$row['highschool_team'];?>	</td></tr><tr><td> 
+High School Number: 			</td><td><?php echo "".$row['highschool_number'];?>	</td></tr><tr><td> 
+AAU Team: 						</td><td><?php echo "".$row['aau_team'];?>			</td></tr><tr><td> 
+AAU Number:						</td><td><?php echo "".$row['aau_number'];?>		</td></tr><tr><td> 
+</table> 
+
+<h5> Academic Information</h5>
+<table>																				<tr><td >
+SAT score:				 		</td><td><?php echo "".$row['SAT_score'];?>			</td></tr><tr><td> 
+Cummulative GPA:				</td><td><?php echo "".$row['cum_gpa'];?>			</td></tr><tr><td>
+Transcript Available:				</td><td><?php echo "(".$row['verified']; echo')'?>			</td><td>
+<?php echo '<a href="http://www.whoopcity.com/players/trx/'.$row['trans']; ?>">View Transcript Here</a></td></tr>
+</table> 
+
+<h5> High School Statistics (Current Season) </h5>
+
+<table>																				<tr><td>
+Season Beginning Fall of: 		</td><td><?php echo "".$row['season'];?>			</td></tr><tr><td> 
+Team:							</td><td><?php echo "".$row['team_level'];?>		</td></tr><tr><td> 
+Division:						</td><td><?php echo "".$row['highschool_div'];?>	</td></tr><tr><td> 
+
+Games Played: 					</td><td><?php echo "".$row['games_played'];?>		</td></tr><tr><td> 
+Games Started: 					</td><td><?php echo "".$row['games_started'];?>		</td></tr><tr><td> 
+Minutes per Game: 				</td><td><?php echo "".$row['mins_per'];?>			</td></tr><tr><td> 
+
+Points per Game: 				</td><td><?php echo "".$row['pts_per'];?>			</td></tr><tr><td> 
+2-Point Percentage: 			</td><td><?php echo "".$row['2pt_perc'];?> %			</td></tr><tr><td> 
+3-Point Percentage: 			</td><td><?php echo "".$row['3pt_perc'];?> %			</td></tr><tr><td> 
+Free-Throw Percentage: 			</td><td><?php echo "".$row['ft_perc'];?> %			</td></tr><tr><td> 
+
+Offensive Rebounds per game: 	</td><td><?php echo "".$row['off_per'];?>			</td></tr><tr><td> 
+Defensive Rebounds per game:	</td><td><?php echo "".$row['def_per'];?>			</td></tr><tr><td> 
+Total Rebounds per game:		</td><td><?php echo	"".$row['reb_per'];	?>			</td></tr><tr><td> 
+Steals per game: 				</td><td><?php echo "".$row['steals_per'];?>		</td></tr><tr><td> 
+Assits per game: 				</td><td><?php echo "".$row['assists_per'];?>		</td></tr><tr><td> 
+Turnovers per game: 			</td><td><?php echo "".$row['turnovers_per'];?>		</td></tr><tr><td> 
+Fouls per game: 				</td><td><?php echo "".$row['fouls_per'];?>			</td></tr><tr><td> 
+Assit to Turnover Ratio: 		</td><td><?php echo "".$row['ass_turn_ratio'];?>	</td></tr><tr><td> 
+Blocks per Game:				</td><td><?php echo "".$row['blocks_per'];?>		</td></tr> 
+</table>
+
+
+<p><a href='profile_edit.php'>Go here to edit your profile</a></p>
+	<!-- ends info div --> </div>
+
+
+
+
+
+<!-- end #mainContent --></div><br class="clearfloat" />
+
+{% endblock %}
+

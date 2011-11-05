@@ -1,0 +1,127 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}PLAYA{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+   
+<div id="nav_bar"> 
+
+| <a href="profile" ><font color="#565656">my profile</font> </a>
+| <a href="collegesearch" ><font color="#565656">search colleges </font></a>
+| <a href="../logout.php" ><font color="#565656">logout </font></a>
+|
+</div>
+
+	<div id="container">  
+		<div id="mainContent">
+			<div id="signin">
+				<h6> Hi {{ Player.first_name }}</h6>
+				<table> <tr><td></td></tr>
+						<tr><td><img src="uploads.jpg" width='110' >
+						<form enctype="multipart/form-data" action="tranny.php" method="POST">
+						<tr><td><input type="hidden" name="MAX_FILE_SIZE" value="100000" /></td></tr>
+						<tr><td>Change your Pic? <input name="uploadedfile" type="file" /></td></tr>
+						<tr><td>
+							<a href="javascript:uploadFile('206276', '531745294');"><img name="Upload" src="../Images/common_images/uploaddocument_large_n.gif" alt="Upload Attachment" border="0" />
+						<input type="submit" value="Upload File" /></form></td></tr>
+				</table>
+				<br>
+			</div>
+			<div id="file">
+				<h4>Fill In Your Information. The more information you fill in, the more college coaches will see. <br><br></H4>
+				<p><form action="/whoopcity" method="post">
+				<h4>Personal Information</h4>
+					<table>
+						<tr><td>First Name:<input type="text" name="first_name" maxlength="60"  value="" /></td><td>Last Name:<input type="text" name="last_name" value="" maxlength="60"><br></td></tr>
+						<tr><td>Birth Date:</td><td>			<select name="birth_month">	
+								<option value="January">January</option></select>
+								<select name="birth_year">	<option value="1992">1992</option></select></td></tr>											
+						<tr><td>Graduation Date: </td><td><select name="graduation_month">	
+								<option value="May">May</option></select>
+								<select name="graduation_year">
+								<option value="2010">2012</option>
+								</select></td></tr>
+					</table>
+
+
+					<h4> Team Information </h4>
+						<table>
+<tr><td>High School Team:</td><td><input type="text" name="highschool_team" maxlength="25" value=""></td></tr>
+<tr><td>High School Number:</td><td><input type="number" name="highschool_number"  value="" maxlength="30" size="4"></td></tr>
+<tr><td>AAU Team Name:</td><td><input type="text" name="aau_team" value="" maxlength="30" ></td></tr>
+<tr><td>Current AAU Number:</td><td><input type="number" name="aau_number" value="" maxlength="4" size="4"></td></tr>
+</table>
+
+<h4> Academic Information </h4>
+
+<table>
+<tr><td>Cummulative GPA: </td><td><input type="float" name="cum_gpa" value="" size="4"></td></tr>
+<tr><td>SAT Score (out of 2400):</td><td><input type="number" name="SAT_score" value="" size="4"></td></tr>
+</table>
+
+<table>
+<tr><td>
+
+
+Your Transcript is already in our database! <a href="uploads/<?php echo $filename ?>.pdf" target="_blank">Click Here to View</a>
+
+<tr><td> To Upload a New Transcript:
+
+<form enctype="multipart/form-data" action="tranny.php" method="POST">
+<tr><td><input type="hidden" name="MAX_FILE_SIZE" value="100000" /></td></tr>
+<tr><td><input name="uploadedfile" type="file" /></td></tr>
+<tr><td><input type="submit" value="Upload File" /></form></td></tr>
+
+
+</td></tr>
+</table>
+
+<h4> Statistics </h4>
+
+<table>
+<tr><td>Season Beginning Fall of: </td><td><select name="year">	<option value="2007">2007</option>
+												<option value="2008">2008</option>
+												<option value="2009">2009</option>
+												<option value="2010">2010</option>
+												<option value="2011">2011</option></select><br>
+										
+										
+<tr><td>Team: </td><td><select name="team_level"><option value="Freshman">Freshman</option><option value="Junior Varsity">Junior Varsity</option><option value="Varsity">Varsity</option></select><br>
+<tr><td>Division: </td><td><select name="highschool_div">		<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option></select><br>
+
+<tr><td>Games Played: </td><td><input type="number" name="games_played" value="" size="2"></td></tr>
+<tr><td>Games Started: </td><td><input type="number" name="games_started" value=""size="2"></td></tr>
+<tr><td>Minutes per Game: </td><td><input type="float" name="mins_per" value="" size="4"></td></tr>
+<tr><td>Points per Game: </td><td><input type="float" name="pts_per"value="" size="4"></td></tr>
+<tr><td>2-Point Percentage: </td><td><input type="float" name="2pt_perc" value="" size="4"> %</td></tr>
+<tr><td>3-Point Percentage: </td><td><input type="float" name="3pt_perc" value="" size="4"> %</td></tr>
+<tr><td>Free-Throw Percentage: </td><td><input type="float" name="ft_perc" value="" size="4"> %</td></tr>
+<tr><td>Offensive Rebounds per game: </td><td><input type="float" name="off_per" value=""></td></tr>
+<tr><td>Defensive Rebounds per game: </td><td><input type="float" name="def_per" value=""></td></tr>
+<tr><td>Steals per game: </td><td><input type="float" name="steals_per" value="" size="4"></td></tr>
+<tr><td>Assits per game: </td><td><input type="float" name="assists_per" value="" size="4" ></td></tr>
+<tr><td>Turnovers per game: </td><td><input type="float" name="turnovers_per" value="" size="4"></td></tr>
+<tr><td>Fouls per game: </td><td><input type="float" name="fouls_per"  value="" size="4"></td></tr>
+<tr><td>Blocks per Game: </td><td><input type="float" name="blocks_per" value="" size="4"></td></tr>
+</table>
+
+
+
+<h4>Game Film</h4>
+<table>
+<tr><td>After Downloading game film of yourself, get the Embedded info from your YouTube video (includes object tabs):</td></tr>
+<tr><td>Clip 1: <input type="text" name="http1" value=""></td></tr>
+<tr><td>Clip 2: <input type="text" name="http2"></td></tr>
+<tr><td>Clip 3: <input type="text" name="http3"></td></tr>
+<tr><td><input type="submit" name="update_profile" value="Update My Profile "></td></tr>
+</table>
+
+
+<!-- end #mainContent --></div><br class="clearfloat" /><!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+</div>
+
+{% endblock %}

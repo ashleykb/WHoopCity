@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block css_file %}log.css{% endblock %}
+{% block title %}Home{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+
+	<div id="nav_bar"> 	
+	</div>
+	<div id="container">
+		<div id="mainContent">
+			<div id="signin">
+
+				<h4><a href="register">Register Here</a></h4>
+				<h4>Sign In Here</h4>
+				<form method="post">
+					<table>
+					<tr><td>I am a:</td></tr>
+					<tr><td>	<input type="radio" name="user_type" value="players"> Player</input></td></tr>
+					<tr><td>	<input type="radio" name="user_type" value="coaches"> Coach</input></td></tr>
+					<tr><td>    <input type="radio" name="user_type" value="aau"> AAU Manager</input></td></tr>
+					<p>
+						<input type="hidden" name="md5pass"><tr><td>
+							Email:</td></tr><tr><td>
+						<input type="text" name="email" maxlength="40" size="25"></td></tr><tr><td>
+							Password:</td></tr><tr><td>
+						<input type="password" name="pass" maxlength="40" size="25"></td></tr><tr><td>
+						<input type="submit" name="submit" value="Login"></form></tr></td></table>
+			</div>
+
+			<div id="index_body">
+				<table>
+					<tr><td align="center">
+							<a href="teams/c_about"> College Coaches </a></td>
+						<td align="center">
+							<a href="players/p_about"> Players</a></td>
+						<td align="center">
+							<a href="teams/a_about"> AAU Teams</a></td>
+					</tr>
+
+					<tr><td align="center"><a href="teams/c_about">
+							<img src="{{ MEDIA_URL }}images/coach.jpg" width="175" height="125" /> </a></td>
+						<td align="center"><a href="players/p_about">
+							<img src="{{ MEDIA_URL }}images/player.jpg" width="215" height="125" /> </a></td>
+						<td align="center"><a href="teams/a_about">
+							<img src="{{ MEDIA_URL }}images/aau.jpg" width="175" height="125" /> </a></td>
+					</tr>
+					<tr><td align="center">
+							<a href="teams/c_about">Learn More </a></td>
+						<td align="center">
+							<a href="players/p_about">Example Profiles</a></td>
+						<td align="center">
+							<a href="teams/a_about">What it Takes </a></td>
+					</tr>
+
+					<tr><td align="center">
+							<a href="teams/c_about"><img src="{{ MEDIA_URL }}images/BR_logo.jpg" width="175" /> </a></td>
+						<td align="center">
+							<a href="players/p_about"><img src="{{ MEDIA_URL }}images/player.jpg" width="215" height="125" /> </a></td>
+						<td align="center">
+							<a href="teams/a_about"><img src="{{ MEDIA_URL }}images/hoop.jpg" width="175" height="125" /> </a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br class="clearfloat" />
+
+{% endblock %}

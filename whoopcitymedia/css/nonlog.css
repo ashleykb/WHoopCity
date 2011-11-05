@@ -1,0 +1,302 @@
+body  {
+	font: 100% Andale Mono;
+	/*background-image: url('../images/rice.gif');*/
+    background: #B9B8B5; 
+	/* we're making this temp unavailable 
+	background-image: url('whoopcity_bg4.gif'); */
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+
+}
+
+.whoop #container { 
+	width: 740px;  /* this will create a container 80% (or not) of the browser width */
+	background: #B9B8B5; 
+	margin: 0 0 0 130; /* the auto margins (in conjunction with a width) center the page */
+	padding 0 0 0 0px;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	font: 60% Andale Mono;
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+} 
+
+.whoop #container_index {
+	background: #B9B8B5; 
+	font: 100% Andale Mono;
+	width: 740px;
+	margin: 0 0 0 130px; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0 0 0;
+	position: relative;
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+}
+
+/*	background-image: url('../images/index_pic.jpg');*/
+
+/* Tips for mainContent:
+1. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+2. Be aware it is possible to cause float drop (the dropping of the non-floated mainContent area below the sidebar) if an element wider than it can contain is placed within the mainContent div. WIth a hybrid layout (percentage-based overall width with em-based sidebar), it may not be possible to calculate the exact width available. If the user's text size is larger than average, you will have a wider sidebar div and thus, less room in the mainContent div. You should be aware of this limitation - especially if the client is adding content with Contribute.
+3. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This may help avoid several IE-specific bugs.
+*/
+.whoop #mainContent { 
+	background: #FFFFFF;
+	margin: 0 0px 0 0px; /* the right margin can be given in percentages or pixels. It creates the space down the right side of the page. */
+	padding: 3 0 0 25;
+	font: Andale Mono;
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+
+}
+
+.whoop #mainContent h1{ 
+	background: #FFFFFF;
+	font:  100% Andale Mono;
+	color: #111111;
+	
+}
+img { border: none; }
+
+
+.whoop #header { 
+	width: 505px;
+	font: 'Andale Mono';
+	height: 100px;
+	color: #FFFFFF;
+	background: #B9B8B5; 
+	text-align: left;
+	padding: 20 0 0 100;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+} 
+
+.whoop #header h1 {
+    font-size: 250%;
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+.whoop #nav_bar { 
+	width: 680px;
+	font: Andale Mono;
+	height: 100px;
+	background: #FFFF06; 
+	text-align: right;
+	margin: 0 0 -60 90px;
+	padding: 0 0 0 100px;
+	color: #black;
+
+
+} 
+.whoop #nav_bar_index { 
+	width: 680px;
+	font: Andale Mono;
+	height: 100px;
+	background: #FFFF06; 
+	text-align: right;
+	margin: 0 0 -60 90px;
+	color: #565656;
+	padding: 0 0 0 100;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+
+
+} 
+
+.whoop #sidebar1 {
+	float: left; 
+	width: 0; /* since this element is floated, a width must be given */
+    height: 600px;
+	padding:  0 0 0 40px; /* top and bottom padding create visual space within this div  */
+	margin: 0 0 0 0px;
+}
+.whoop #sidebar_ad {
+	float: left; 
+	width: 20px; /* since this element is floated, a width must be given */
+	background: #FFFFFF; /* the background color will be displayed for the length of the content in the column, but no further */
+	margin: 0 -25px 0 0;
+	padding:  0; /* top and bottom padding create visual space within this div  */
+}
+
+
+.whoop #search { 
+	height: 350px;
+	width: 300px;
+	float: right;
+	padding: 0 0 0 20;
+} 
+.whoop #info { 
+	height: 350px;
+	width: 300px;
+	float: left;
+	padding: 0 45 0 0;
+} 
+
+
+
+
+/* Tips for sidebar1:
+1. Since we are working in relative units, it's best not to use padding on the sidebar. It will be added to the overall width for standards compliant browsers creating an unknown actual width. 
+2. Since em units are used for the sidebar value, be aware that its width will vary with different default text sizes.
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".whoop #sidebar1 p" rule.
+*/
+
+
+
+
+
+.whoop #rightbar1 {
+	float: right; 
+	height: 200px;
+	width: 250px; /* since this element is floated, a width must be given */
+	background: #e62b86; /* the background color will be displayed for the length of the content in the column, but no further */
+	margin:  -50px 20px 0 0; /* top and bottom padding create visual space within this div  */
+	font: Andale Mono;
+	padding: 25 25 0 0;
+
+}
+
+.whoop #rightbar1 h1{
+	font: 90% Andale Mono;
+	margin-left: 5px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 5px;
+	
+}
+
+
+.whoop #sidebar1 h3, .whoop #sidebar1 p {
+	margin-left: 5px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+	
+}
+
+.whoop #sidebar1 h2 {
+	font: 40% Andale Mono;
+	margin-left: 5px;
+}
+
+
+.whoop #info { 
+	background: #FFFFFF;
+	width: 250;
+	margin: 0;/* the right margin can be given in percentages or pixels. It creates the space down the right side of the page. */
+	padding: 3 0 0 25;
+	font: Andale Mono;
+	font-family: Monaco,
+             "Lucida Console",
+             Consolas,
+             "Andale Mono",
+             "Bitstream Vera Sans Mono",
+             "Lucida Sans Typewriter",
+             "DejaVu Sans Mono",
+             monospace;
+
+}
+.whoop #playermovie { 
+	width: 0px;
+	float: right;
+	padding: 150 50 0 0;
+}
+
+.whoop #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background: none;
+	color: #FFFFFF;
+	text-align: right;
+	font: 150% Andale Mono;
+}
+
+
+.whoop #pic { 
+	width: 100px;
+	height: 100px;
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	text-align: right;
+}
+
+.whoop #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+
+
+a:link{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+
+a:visited{
+	text-decoration: none;
+	color: #FFFFFF;
+		border: none;
+}
+
+a:active{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+
+--> 
+
+
+
+
+

@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}Example AAU Profile{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+
+<div id="nav_bar_player" >
+<font text-color=#565656>
+ <a href="../" ><font color="#565656">home </font></a>
+| <a href="a_about" ><font color="#565656">about </font></a>
+| <a href="../players/p_exprofile"><font color="#565656">example player profile</font></a>
+| <a href="../" ><font color="#565656">example search </font></a>
+| <a href="../register/register" >register</a>  </font>  </div>
+   
+<div id="sidebar1">
+<?php include '../sidebarad.html'; ?>
+</div>
+<div id="container_player">
+
+
+
+<div id="mainContent_player">
+
+
+
+<h1>Welcome Coach<?php echo " ".$row['last_name']; ?></h1>
+
+<h1>AAU Team Name:<?php echo "  ".$row['aau_team'];?></h1>
+
+<h2>Roster</h2>
+
+<table>
+<tr><td>10</td><td>Cheyenne</td></tr>
+<tr><td>12</td><td>Marissa</td></tr>
+<tr><td>14</td><td>Alyssa</td></tr>
+<tr><td>15</td><td>Shilo</td></tr>
+<tr><td>20</td><td>Hannah</td></tr>
+<tr><td>21</td><td>Ashley</td></tr>
+<tr><td>23</td><td>Sarah</td></tr>
+<tr><td>33</td><td>Rhianna</td></tr>
+<tr><td>35</td><td>Ashley B.</td></tr>
+<tr><td>42</td><td>Sam</td></tr>
+
+</table>
+
+<p>
+<a href="excalendar_index.php"><font color=#404040>Edit your team schedule on the Calendar here.</font></a></p>
+
+<p>
+<a href='profile_edit'><font color=#404040>Edit your profile here</font></a></p>
+
+{% endblock %}

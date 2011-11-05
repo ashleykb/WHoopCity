@@ -1,0 +1,102 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}Example Coach Profile{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+
+<div id="nav_bar">
+<a href="c_about" >about</a>
+| <a href="ex_playersearch" >search players</a>
+| <a href="../register/register" >register</a> 
+<!-- end #nav_bar --></div>
+
+<body class="whoop">
+ 
+<div id="container_college">
+   
+<div id="mainContent_college">
+
+<h1>Welcome Back Coach</h1>
+
+<div id="info_college">
+
+<table>																				
+<tr><td><h1>School Info</h1></td></tr>	<tr><td> 
+Head Coach:				</td><td> Hannah Frank </td></tr><tr><td> 
+Basketball Division:	</td><td>II</td></tr><tr><td> 
+Location: </td><td> City Park, MD</td></tr><tr><td>
+Recruiting Coordinator: </td><td> Jennifer Staks</td></tr><tr><td> 
+Assistant: </td><td> Jordan Maila</td></tr><tr><td> 
+Graduate Assistant: </td><td>Laura O'Reilly</td></tr><tr><td> 
+School Website:			</td><td>www.university.com</td></tr><tr><td> 
+WBB Webstite:			</td><td>www.buckathletixs.com</td></tr><tr><td> 
+Mascot:					</td><td>Tornados</td></tr><tr><td> 
+School Year of Inception: 	</td><td>1924</td></tr><tr><td> 
+Student Population:		</td><td>2,400</td></tr><tr><td> 
+School Write-Up:		</td></tr><tr><td> Go here, it's fantastic</td></tr><tr><td> 
+
+<img src="/images/ex_logo.jpg" width="200">
+</table>
+
+<a href='profile_edit'>Go here to edit your profile</a>
+</div>
+
+
+<div id="search_college">
+
+
+<h1> Search for A Player</h1>
+
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
+<table>
+<tr><td>AAU Team:<br><b>Required Field:</b></td><td><input type="text" name="aau_team" maxlength="30"  value="<?php $aau_team ?>"  /></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>AAU Number:</td><td><input type="text" name="aau_number" maxlength="2"  value="<?php $aau_number ?>" size="1" /></td></tr>
+<tr><td>First Name:</td><td><input type="text" name="first_name" maxlength="60"  value="<?php $first_name ?>" /></td></tr>
+<tr><td>Last Name:</td><td><input type="text" name="last_name" maxlength="60"  value="<?php $last_name ?>" /></td></tr>
+<tr><td></td><td><input type="submit" name="submit" value="Search"></td></tr>
+</table>
+
+
+<?php
+
+// Retrieve data from table PLAYERS by AAU TEAM
+
+$result = mysql_query("SELECT * FROM players WHERE 
+
+(aau_team = '".$_POST['aau_team']."' )
+
+AND 
+
+(password = 'example')
+
+");
+
+while ($row = mysql_fetch_array ($result)) {
+echo '<table>
+<tr><td><h1>Player</h1></td></tr>
+<tr><td>Name:</td><td>'.$row[2]; echo ' '.$row[3]; echo '</td></tr>
+<tr><td>AAU Number:</td><td>' .$row[6]; echo '</td></tr>
+<tr><td>Email:</td><td> <a href="mailto:'.$row[0]; echo'"><u><font color="#404040">'.$row[0]; echo '</font></u></a></td></tr>';
+}
+
+$result2 = mysql_query("SELECT * FROM aau WHERE 
+
+aau_team = '".$_POST['aau_team']."'
+
+");
+
+while ($row = mysql_fetch_array ($result2)) {
+echo '
+<tr><td>AAU Schedule:</td><td><a href="../AAU/a_excalendar_index?id='.$row[7]; 
+echo '">AAU Calendar</a></td></tr>
+</table>';
+}
+?>
+
+</div><!-- end #mainContent --></div><br class="clearfloat" />
+
+
+{% endblock %}
+

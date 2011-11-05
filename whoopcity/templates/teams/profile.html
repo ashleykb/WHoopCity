@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock css_file %}
+{% block title %}COACH{% endblock title %}
+{% block class %}class="whoop"{% endblock class %}
+{% block content %}
+
+
+<div id="nav_bar">
+	| <a href="../" ><font color="#565656">home</font> </a>
+	| <a href="profile" ><font color="#565656">team profile</font> </a>
+	| <a href="profile_edit.html" ><font color="#565656">edit profile</font> </a>
+	| <a href="playersearch" ><font color="#565656">search players </font></a>
+	| <a href="../logout.php" ><font color="#565656">logout </font></a>
+	|
+</div>
+
+<body class="whoop">
+	<div id="container_college">
+   		<div id="mainContent_college">
+			<h1>Welcome back {{ team.school_name }}</h1>
+			<img src="{{ MEDIA_URL }}images/Brown_logo.jpg" width="200">
+			<div id="info_college">
+				<table>																			
+					<tr><td><h1>School Info</h1></td></tr><tr><td> 			
+						Head Coach:				</td><td></td></tr><tr><td> 
+						Basketball Division:	</td><td>{{ division }}</td></tr><tr><td> 
+						Team Level:				</td><td>{% for level in Teams %}{{ team.level }}{% endfor %}</td></tr><tr><td>
+						Location: 				</td><td>{{ address}} {{ city }},{{ state }} {{ zip_code }}</td></tr><tr><td>
+						School Website:			</td><td>{{ school_website }}</td></tr><tr><td> 
+						WBB Webstite:			</td><td>{{ team_website }}</td></tr><tr><td> 
+						Mascot:					</td><td>{{ mascot }}</td></tr><tr><td> 
+						School Year of Inception:</td><td>{{ school_inception }}</td></tr><tr><td> 
+						Student Population:		</td><td>{{ school_population }}</td></tr><tr><td> 
+						School Write-Up:		</td><td>{{ school_info }}</td></tr> 
+				</table>
+				<br><a href='profile_edit'><font color="#404040">Go here to edit your profile<font></a>
+			</div>
+		</div><br class="clearfloat" />
+
+{% endblock %}

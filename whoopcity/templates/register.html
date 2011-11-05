@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}Registration{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+  
+
+<div id="sidebar1"><center></center><!-- end #sidebar1 --></div>
+<font color="white">
+	<h3>You are not yet registered!</h3>
+	<h4>To start the process, we will send you an email</h4>
+
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			Email:<input type="text" name="email" maxlength="40">
+			<br>
+			<br>
+			<input type="submit" name="submit" value="Send Me My Confirmation Email"> 
+		</form>
+</font>
+
+<br class="clearfloat" />
+
+{% endblock %}

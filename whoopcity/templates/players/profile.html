@@ -1,0 +1,79 @@
+{% extends 'base.html' %} 
+{% block css_file %}log.css{% endblock %}
+{% block title %}Welcome Player{% endblock %}
+{% block class %}class="whoop"{% endblock %}
+{% block content %}
+
+<div id="nav_bar_player">
+| <a href="../" ><font color="#565656">home</font> </a>
+| <a href="profile_edit" ><font color="#565656">edit profile</font> </a>
+| <a href="collegesearch" ><font color="#565656">search colleges </font></a>
+| <a href="../logout.php" ><font color="#565656">logout </font></a>
+|
+	<div id="rightbar_player">
+		<img src="{{ MEDIA_URL }}images/aau.jpg" width="225">
+	</div>
+</div>
+
+<div id="sidebar1">
+</div>
+
+<div id="container_player">
+	<div id="mainContent_player">
+		<div id="playermovie">
+			<table>
+				<tr><td><center><h3>My Game Film #1</h3></td></tr>
+				<tr><td><object><param name="movie" value="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="200" height="150"></embed></object></center></td></tr>
+				<tr><td><center>---</center></td></tr>
+				<tr><td><center><h3>My Game Film #2</h3></td></tr>
+				<tr><td><object><param name="movie" value="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/WXA21cFE08c&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="200" height="150"></embed></object></center></td></tr>			
+				<tr><td><center>---</center></td></tr>
+			</table>
+		</div>
+
+	<h5> Contact Information</h5>
+		<table><tr><td>
+			{{ city }}, {{ state }}			</td><td></td></tr><tr><td> 
+			Graduation Date: 				</td><td></td></tr><tr><td> 
+			Graduation Date: 				</td><td></td></tr><tr><td> 
+			Birth Date: 					</td><td>{{ birth_date }}</td></tr><tr><td> 
+			High School Team:				</td><td></td></tr><tr><td> 
+			High School Number: 			</td><td></td></tr><tr><td> 
+			AAU Team: 						</td><td></td></tr><tr><td> 
+			AAU Number:						</td><td></td></tr><tr><td> 
+		</table> 
+
+	<h5> Academic Information</h5>
+		<table><tr><td>
+			SAT score:				 		</td><td></td></tr><tr><td> 
+			Cummulative GPA:				</td><td></td></tr>
+		</table> 
+
+	<h5> High School Statistics (Current Season) </h5>
+		<table><tr><td>
+			Season Beginning Fall of: 		</td><td></td></tr><tr><td> 
+			Team:							</td><td></td></tr><tr><td> 
+			Division:						</td><td></td></tr><tr><td> 
+			Games Played: 					</td><td></td></tr><tr><td> 
+			Games Started: 					</td><td></td></tr><tr><td> 
+			Minutes per Game: 				</td><td></td></tr><tr><td> 
+			Points per Game: 				</td><td></td></tr><tr><td> 
+			2-Point Percentage: 			</td><td></td></tr><tr><td> 
+			3-Point Percentage: 			</td><td></td></tr><tr><td> 
+			Free-Throw Percentage: 			</td><td></td></tr><tr><td> 
+			Offensive Rebounds per game: 	</td><td></td></tr><tr><td> 
+			Defensive Rebounds per game:	</td><td></td></tr><tr><td> 
+			Total Rebounds per game:		</td><td></td></tr><tr><td> 
+			Steals per game: 				</td><td></td></tr><tr><td> 
+			Assits per game: 				</td><td></td></tr><tr><td> 
+			Turnovers per game: 			</td><td></td></tr><tr><td> 
+			Fouls per game: 				</td><td></td></tr><tr><td> 
+			Assit to Turnover Ratio: 		</td><td></td></tr><tr><td> 
+			Blocks per Game:				</td><td></td></tr> 
+		</table>
+
+		<p><a href='profile_edit.php'>Go here to edit your profile</a></p>
+	</div>
+</div><br class="clearfloat" />
+
+{% endblock %}
