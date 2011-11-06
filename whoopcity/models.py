@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User, UserManager
 
 class Team(models.Model):
   """
@@ -18,9 +19,7 @@ class Team(models.Model):
     return self.school_name
 
 
-class Player(models.Model):
+class Player(User):
   team = models.ForeignKey(Team)
-  first_name = models.CharField(max_length=30)
-  last_name = models.CharField(max_length=30)
   games_played = models.IntegerField()
 

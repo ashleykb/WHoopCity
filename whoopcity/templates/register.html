@@ -4,19 +4,28 @@
 {% block class %}class="whoop"{% endblock %}
 {% block content %}
   
+<div id="nav_bar">  
+ <a href="/">home </a>
+</div>
 
-<div id="sidebar1"><center></center><!-- end #sidebar1 --></div>
-<font color="white">
+<body class="whoop">
+
+<div id="container_info">
+
+<div id="mainContent_info">
+
 	<h3>You are not yet registered!</h3>
+	
 	<h4>To start the process, we will send you an email</h4>
 
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<form method="post">
 			Email:<input type="text" name="email" maxlength="40">
 			<br>
 			<br>
 			<input type="submit" name="submit" value="Send Me My Confirmation Email"> 
 		</form>
-</font>
+
+</div>
 
 <br class="clearfloat" />
 
