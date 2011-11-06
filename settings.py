@@ -1,3 +1,4 @@
+import os
 # Django settings for mysite project.
 
 DEBUG = True
@@ -19,6 +20,9 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+ROOT_DIR = os.path.split(PROJECT_DIR)[0]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -45,13 +49,13 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/Users/ashleykb/Desktop/mysite/whoopcitymedia'
+MEDIA_ROOT = PROJECT_DIR + '/whoopcitymedia/'
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'http://localhost:8080/media/'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -101,7 +105,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -148,3 +152,6 @@ LOGGING = {
         },
     }
 }
+
+
+LOGIN_REDIRECT_URL = '/index'

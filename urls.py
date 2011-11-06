@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 import settings
 
-#from django.contrib.auth.views import login, logout
+from django.contrib.auth.views import login, logout
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -11,8 +11,8 @@ urlpatterns = patterns('',
 	(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 	(r'^$', 'whoopcity.views.index'),
 	(r'^index$', 'whoopcity.views.index'),
-#	(r'^login$', 'whoopcity.views.login', {}, 'login'),	
-#	(r'^logout$', 'whoopcity.views.logout'),
+	(r'^login/?$', login, dict(template_name='index.html')),
+	(r'^logout/?$', logout, dict(next_page='/index')),
 	(r'^about$', 'whoopcity.views.about'),
 	(r'^contact$', 'whoopcity.views.contact'),
 	(r'^register$', 'whoopcity.views.register'),
