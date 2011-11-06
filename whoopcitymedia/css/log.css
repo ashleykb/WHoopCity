@@ -1,8 +1,31 @@
 body  {
 	background: #656565;
 	font-family: Andale Mono;
-	margin: 0; 
-	padding: 0;
+}
+
+a:link{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+
+a:visited{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+a:active{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: none;
 }
 
 .whoop #header { 
@@ -38,7 +61,7 @@ body  {
 	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
 }
 
-.whoop #mainContent { 
+#mainContent { 
 	background-image: url('../images/player.jpg');
 	background-size: 1200px;
 	width: 710px;
@@ -48,7 +71,7 @@ body  {
 	font: Andale Mono;
 }
 
-.whoop #signin { 
+#signin { 
 	float: left;
 	background: #white;
 	width: 180px;
@@ -56,43 +79,95 @@ body  {
 	padding: 0 20 0 20;
 }
 
-.whoop #index_body { 
+#index_body { 
 	float: left;
 	color: #FFFFF;
-	width: 450px;
-	margin: 30 0 0 0px; 
+	width: 90%;
+	margin: 2% -100px 0 0px; 
 	padding: 0 20 20 10;
 }
-.whoop #index_body a:link{
-	color: #FFFFF;
-    font-size: 30pt;
+
+#index_body a:link{
+	color: #purple;
+    font-size: 250%;
 }
 
-.whoop #lower_table{ 
-	color: #FFFFFF;
-    font-size: 15pt;
+#one{
+	width: 44%;
+	height: 50px;
+	margin: 20px 3% 0 3%;
+	background: #CCC;
+	font-size: 150%;
+	float: left;
 }
 
-#second_table { 
-	border-style: solid;
-	border-width:10px;
-	color: #FFFFFF;
+#two{
+	width: 44%;
+	height: 50px;
+	margin: 20px 3% 0 3%;
+	background: #CCC;
+	font-size: 150%;
+	float: left;
 }
+
+#left{
+	width: 25%;
+	height: 200px;
+	margin: 20px 6.125% 0 6.125%;
+	background-image: url('../images/schapper.jpg');
+	background-size: 100%;
+	float: left;
+}
+
+#center {
+	width: 25%;
+	height: 200px;
+	margin: 20px 0 0 0;
+	background-image: url('../images/aau.jpg');
+	background-size: 100%;
+	float: left;
+}
+
+#right {
+	width: 25%;
+	height: 200px;
+	margin: 20px 6.125% 0 6.125%;
+	background-image: url('../images/coach.jpg');
+	background-size: 100%;
+	float: left;
+}
+
 
 #first {
-	background-color: #429032;
+	width: 23.5%;
+	height: 300px;
+	margin: 20px 1% 0 0;
+	background-image: url('../images/world.png');
+	float: left;
 }
 
 #second {
-	background-color: #429032;
+	width: 23.5%;
+	height: 300px;
+	margin: 20px 1% 0 1%;
+	background-image: url('../images/blue.png');
+	float: left;
 }
 
 #third {
-	background-color: #429032;
+	width: 23.5%;
+	height: 300px;
+	margin: 20px 1% 0 1%;
+	background-image: url('../images/mom.jpg');
+	float: left;
 }
 
 #fourth {
-	background-color: #429032;
+	width: 23.5%;
+	height: 300px;
+	margin: 20px 0 0 1%;
+	background-image: url('../images/rice.gif');
+	float: left;
 }
 
 .whoop #mainContent h1{ 
@@ -274,12 +349,12 @@ img { border: none; }
 	padding: 100 0 0 0;
 }
 
-.whoop #footer { 
-	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+#footer { 
+	margin: 3% 0 3% 0;
 	background: none;
 	color: #FFFFFF;
 	text-align: right;
-	font-size: 10pt;
+	font-size: 80%;
 	}	
 
 .whoop #pic { 
@@ -296,30 +371,7 @@ img { border: none; }
     line-height: 0px;
 }
 
-a:link{
-	text-decoration: none;
-	color: #FFFFFF;
-	border: none;
-}
 
-
-a:visited{
-	text-decoration: none;
-	color: #FFFFFF;
-		border: none;
-}
-
-a:active{
-	text-decoration: none;
-	color: #FFFFFF;
-	border: none;
-}
-
-a:hover{
-	text-decoration: none;
-	color: #FFFFFF;
-	border: none;
-}
 --> 
 
 .whoop #container_info {
